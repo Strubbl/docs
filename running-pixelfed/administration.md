@@ -31,3 +31,11 @@ $ php artisan tinker
 
 >>> $user->save();
 ```
+
+## Disk space used by GIFs
+If you want to see how much space gifs are taking on your instance, run `php artisan tinker` then run:
+
+`Media::whereMime('image/gif')->sum('size') / 1024 / 1024`
+
+That is the size in megabytes.
+
